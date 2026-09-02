@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RESULT</title>
+</head>
+<body style="background-color: rgb(173, 232, 252); text-align: center; padding-top: 50px;">
+    <h1>Loan prediction result based on given details :</h1>
+    <p>Name: {{ name }}</p>
+    <p>Income: {{ income }}</p>
+    <p>Loan Amount: {{ loan_amount }}</p>
+    <p>Loan Time: {{ loan_time }}</p>
+    <p>Area: {{ area }}</p>
+    <h2>Prediction: {{ prediction }}</h2><br>
+
+    <a href="/predict"><button style="width: 150px; height: 40px;">Predict Again</button></a>
+    <a href="/"><button style="width: 150px; height: 40px;">Home</button></a>
+
+</body>
+</html>
