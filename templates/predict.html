@@ -8,11 +8,11 @@
 <body style="background-color: rgb(173, 232, 252); text-align: center; padding-top: 50px;">
     <h1>Fill Loan Details</h1>
     <form action="/result" method="POST">
-        <input type="text" name="applicant_name" placeholder="Applicant Name" required style="width: 200px; height: 30px; margin-bottom: 10px;"><br>
-        <input type="tel" name="applicant_phnnumber" placeholder="Phone Number" required style="width: 200px; height: 30px; margin-bottom: 10px;"><br>
-        <input type="number" name="income" placeholder="Income" required style="width: 200px; height: 30px; margin-bottom: 10px;"><br>
-        <input type="number" name="loan_amount" placeholder="Loan Amount" required style="width: 200px; height: 30px; margin-bottom: 10px;"><br>
-        <input type="number" name="loan_time" placeholder="Loan Time" required style="width: 200px; height: 30px; margin-bottom: 10px;"><br>
+        <input type="text" name="applicant_name" placeholder="Applicant Name" pattern="[A-Za-z ]+" title="Letters only" required style="width: 200px; height: 30px; margin-bottom: 10px;"><br>
+        <input type="tel" name="applicant_phnnumber" placeholder="Phone Number" pattern="[0-9]{10}" maxlength="10" title="Must contain 10 digits" required style="width: 200px; height: 30px; margin-bottom: 10px;"><br>
+        <input type="number" name="income" min="0"placeholder="Income" required style="width: 200px; height: 30px; margin-bottom: 10px;"><br>
+        <input type="number" name="loan_amount" min="0" placeholder="Loan Amount" required style="width: 200px; height: 30px; margin-bottom: 10px;"><br>
+        <input type="number" name="loan_time" min="0" placeholder="Loan Time" required style="width: 200px; height: 30px; margin-bottom: 10px;"><br>
         <select name="area" required style="width: 210px; height: 35px; margin-bottom: 10px;"><option value="">Select Area</option><option value="Urban">Urban</option><option value="Semiurban">Semiurban</option><option value="Rural">Rural</option></select><br>     
         <button type="submit" style="width: 150px; height: 40px;">Predict</button>
     </form>
